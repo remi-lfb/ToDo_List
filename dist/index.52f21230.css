@@ -1,0 +1,13 @@
+.App {
+  text-align: center;
+}
+
+.strike {
+  text-decoration: line-through;
+}
+
+.ToDoList:hover {
+  cursor: pointer;
+}
+
+/*# sourceMappingURL=index.52f21230.css.map */

@@ -1,0 +1,53 @@
+[{
+  "id": 1,
+  "task": "Donner un bain au chien",
+  "complete": true
+}, {
+  "id": 2,
+  "task": "Faire la lessive",
+  "complete": true
+}, {
+  "id": 3,
+  "task": "Passer l'aspirateur",
+  "complete": false
+}, {
+  "id": 4,
+  "task": "Nourrir le chat",
+  "complete": true
+}, {
+  "id": 5,
+  "task": "Changer les ampoules",
+  "complete": false
+}, {
+  "id": 6,
+  "task": "Faire les courses",
+  "complete": true
+}, {
+  "id": 7,
+  "task": "Faire le plein d'essence",
+  "complete": true
+}, {
+  "id": 8,
+  "task": "Changer les draps",
+  "complete": false
+}, {
+  "id": 9,
+  "task": "Repasser le linge",
+  "complete": true
+}, {
+  "id": 10,
+  "task": "Faire des cookies",
+  "complete": false
+}, {
+  "id": 11,
+  "task": "Faire une sieste",
+  "complete": true
+}, {
+  "id": 12,
+  "task": "Lire un livre",
+  "complete": true
+}, {
+  "id": 13,
+  "task": "Faire de l'excercice",
+  "complete": false
+}]
