@@ -1,8 +1,8 @@
 {
-  "name": "Todo_List",
+  "name": "todo_list",
   "version": "1.0.0",
   "main": "index.js",
-  "repository": "https://github.com/Remi-LFB/Todo_List.git",
+  "repository": "https://github.com/Remi-LFB/ToDo_List.git",
   "author": "Rémi LFB <remi.lfb@gmail.com>",
   "license": "MIT",
   "dependencies": {
