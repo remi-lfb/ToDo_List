@@ -36,7 +36,6 @@ export default function ToDoList() {
                 );
             })}
             <button style={{margin: 20}} onClick={handleFilter}>Effacer les tâches complétées</button>
-            <!-- Send the ToDoList and its setter to the ToDoForm component -->
             <ToDoForm toDoList={toDoList} setToDoList={setToDoList} />
         </div>
     );
