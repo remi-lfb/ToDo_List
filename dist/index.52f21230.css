@@ -6,7 +6,7 @@
   text-decoration: line-through;
 }
 
-.ToDoList:hover {
+.ToDoList a:hover {
   cursor: pointer;
 }
 

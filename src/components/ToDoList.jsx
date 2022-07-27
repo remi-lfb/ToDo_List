@@ -13,15 +13,24 @@ export default function ToDoList() {
         setToDoList(mapped);
     }
 
+    const handleFilter = () => {
+        let filtered = toDoList.filter(task => {
+            return !task.complete;
+        });
+
+        setToDoList(filtered);
+    }
+
     return (
         <div className="ToDoList">
             {toDoList.map(todo => {
                 return (
                     <div className={todo.complete ? "strike" : ""} onClick={() => handleToggle(todo.id)}>
-                        {todo.task}
+                        <a>{todo.task}</a>
                     </div>
                 );
             })}
+            <button style={{margin: 20}} onClick={handleFilter}>Effacer les tâches complétées</button>
         </div>
     );
 }
