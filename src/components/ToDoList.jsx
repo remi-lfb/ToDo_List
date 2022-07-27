@@ -1,6 +1,7 @@
 import React, {useState} from "react";
 
 import data from "../fixtures/data.json";
+import ToDoForm from "./ToDoForm";
 
 export default function ToDoList() {
     const [toDoList, setToDoList] = useState(data);
@@ -31,6 +32,7 @@ export default function ToDoList() {
                 );
             })}
             <button style={{margin: 20}} onClick={handleFilter}>Effacer les tâches complétées</button>
+            <ToDoForm toDoList={toDoList} setToDoList={setToDoList} />
         </div>
     );
 }

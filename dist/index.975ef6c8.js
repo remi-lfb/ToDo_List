@@ -27328,6 +27328,8 @@ var _react = require("react");
 var _reactDefault = parcelHelpers.interopDefault(_react);
 var _dataJson = require("../fixtures/data.json");
 var _dataJsonDefault = parcelHelpers.interopDefault(_dataJson);
+var _toDoForm = require("./ToDoForm");
+var _toDoFormDefault = parcelHelpers.interopDefault(_toDoForm);
 var _s = $RefreshSig$();
 function ToDoList() {
     _s();
@@ -27360,12 +27362,12 @@ function ToDoList() {
                         children: todo.task
                     }, void 0, false, {
                         fileName: "src/components/ToDoList.jsx",
-                        lineNumber: 29,
+                        lineNumber: 30,
                         columnNumber: 25
                     }, this)
                 }, void 0, false, {
                     fileName: "src/components/ToDoList.jsx",
-                    lineNumber: 28,
+                    lineNumber: 29,
                     columnNumber: 21
                 }, this);
             }),
@@ -27377,13 +27379,21 @@ function ToDoList() {
                 children: "Effacer les t\xe2ches compl\xe9t\xe9es"
             }, void 0, false, {
                 fileName: "src/components/ToDoList.jsx",
-                lineNumber: 33,
+                lineNumber: 34,
+                columnNumber: 13
+            }, this),
+            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _toDoFormDefault.default), {
+                toDoList: toDoList,
+                setToDoList: setToDoList
+            }, void 0, false, {
+                fileName: "src/components/ToDoList.jsx",
+                lineNumber: 35,
                 columnNumber: 13
             }, this)
         ]
     }, void 0, true, {
         fileName: "src/components/ToDoList.jsx",
-        lineNumber: 25,
+        lineNumber: 26,
         columnNumber: 9
     }, this);
 }
@@ -27398,9 +27408,89 @@ $RefreshReg$(_c, "ToDoList");
   window.$RefreshReg$ = prevRefreshReg;
   window.$RefreshSig$ = prevRefreshSig;
 }
-},{"react/jsx-dev-runtime":"iTorj","react":"21dqq","../fixtures/data.json":"56XqP","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"km3Ru"}],"56XqP":[function(require,module,exports) {
+},{"react/jsx-dev-runtime":"iTorj","react":"21dqq","../fixtures/data.json":"56XqP","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"km3Ru","./ToDoForm":"9QTWe"}],"56XqP":[function(require,module,exports) {
 module.exports = JSON.parse('[{"id":1,"task":"Donner un bain au chien","complete":true},{"id":2,"task":"Faire la lessive","complete":true},{"id":3,"task":"Passer l\'aspirateur","complete":false},{"id":4,"task":"Nourrir le chat","complete":true},{"id":5,"task":"Changer les ampoules","complete":false},{"id":6,"task":"Faire les courses","complete":true},{"id":7,"task":"Faire le plein d\'essence","complete":true},{"id":8,"task":"Changer les draps","complete":false},{"id":9,"task":"Repasser le linge","complete":true},{"id":10,"task":"Faire des cookies","complete":false},{"id":11,"task":"Faire une sieste","complete":true},{"id":12,"task":"Lire un livre","complete":true},{"id":13,"task":"Faire de l\'excercice","complete":false}]');
 
-},{}],"4DSeP":[function() {},{}]},["1xC6H","ShInH","8lqZg"], "8lqZg", "parcelRequire8f27")
+},{}],"9QTWe":[function(require,module,exports) {
+var $parcel$ReactRefreshHelpers$fe04 = require("@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js");
+var prevRefreshReg = window.$RefreshReg$;
+var prevRefreshSig = window.$RefreshSig$;
+$parcel$ReactRefreshHelpers$fe04.prelude(module);
+
+try {
+var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
+parcelHelpers.defineInteropFlag(exports);
+var _jsxDevRuntime = require("react/jsx-dev-runtime");
+var _react = require("react");
+var _reactDefault = parcelHelpers.interopDefault(_react);
+var _s = $RefreshSig$();
+function ToDoForm({ toDoList , setToDoList  }) {
+    _s();
+    const [userInput1, setUserInput] = (0, _react.useState)("");
+    const handleChange = (evt)=>{
+        setUserInput(evt.currentTarget.value);
+    };
+    const handleSubmit = (evt)=>{
+        evt.preventDefault();
+        addTask(userInput1);
+        setUserInput("");
+    };
+    const addTask = (userInput)=>{
+        let copy = [
+            ...toDoList
+        ];
+        copy = [
+            ...copy,
+            {
+                id: toDoList.length + 1,
+                task: userInput,
+                complete: false
+            }
+        ];
+        setToDoList(copy);
+    };
+    return /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("form", {
+        className: "ToDoForm",
+        onSubmit: handleSubmit,
+        children: [
+            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("input", {
+                type: "text",
+                value: userInput1,
+                onChange: handleChange,
+                placeholder: "Entrez une t\xe2che..."
+            }, void 0, false, {
+                fileName: "src/components/ToDoForm.jsx",
+                lineNumber: 25,
+                columnNumber: 13
+            }, this),
+            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("button", {
+                style: {
+                    marginLeft: 5
+                },
+                children: "Ajouter la t\xe2che"
+            }, void 0, false, {
+                fileName: "src/components/ToDoForm.jsx",
+                lineNumber: 26,
+                columnNumber: 13
+            }, this)
+        ]
+    }, void 0, true, {
+        fileName: "src/components/ToDoForm.jsx",
+        lineNumber: 24,
+        columnNumber: 9
+    }, this);
+}
+exports.default = ToDoForm;
+_s(ToDoForm, "5m2DpaTPYgx4BaqjxYL18HEa8GU=");
+_c = ToDoForm;
+var _c;
+$RefreshReg$(_c, "ToDoForm");
+
+  $parcel$ReactRefreshHelpers$fe04.postlude(module);
+} finally {
+  window.$RefreshReg$ = prevRefreshReg;
+  window.$RefreshSig$ = prevRefreshSig;
+}
+},{"react/jsx-dev-runtime":"iTorj","react":"21dqq","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"km3Ru"}],"4DSeP":[function() {},{}]},["1xC6H","ShInH","8lqZg"], "8lqZg", "parcelRequire8f27")
 
 //# sourceMappingURL=index.975ef6c8.js.map
